@@ -39,4 +39,9 @@ public class TestCalculator {
         int result = calc.add("1\n2,3");
         assertEquals(6, result);
     }
+    @Test(expected = NegativeNumbersException.class)
+    public void testExceptionForNegativeNumbers() {
+        int result = calc.add("1,2,3,-4");
+        //assertEquals(2, result);
+    }
 }
