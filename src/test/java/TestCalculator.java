@@ -26,7 +26,17 @@ public class TestCalculator {
     @Test
 
     public void testTwoNumber() {
-        int result = calc.add("3+5");
+        int result = calc.add("3,5");
         assertEquals(8,result);
+    }
+    @Test
+    public void testFiveNumbres() {
+        int result = calc.add("3,4,2,4,1");
+        assertEquals(14, result);
+    }
+    @Test
+    public void testDelimiterChar() {
+        int result = calc.add("1\n2,3");
+        assertEquals(6, result);
     }
 }
